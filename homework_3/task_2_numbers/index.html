@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script>
+    //Отримати від користувача 3 рядки та вивести їх у довільному порядку однією командою (шаблонні рядки)
+    const string1 = prompt("Введіть рядок 1:");
+    const string2 = prompt("Введіть рядок 2:");
+    const string3 = prompt("Введіть рядок 3:");
+
+    let array = [string1, string2, string3];
+
+    array.sort(() => Math.random() - 0.5);
+
+    console.log(array);
+
+    //Розбити за цифрами п'ятизначне число і вивести у вихідному порядку через пробіл.
+    let number = 7896;
+
+    const result = String(number).split('').join(' ');
+
+    console.log(result);
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ДЗ 3.2. Числа та рядки</title>
+</head>
+<body>
+<p>Отримати від користувача 3 рядки та вивести їх у довільному порядку однією командою (шаблонні рядки);<br>
+    Розбити за цифрами п'ятизначне число і вивести у вихідному порядку через пробіл.</p>
+</body>
+</html>
