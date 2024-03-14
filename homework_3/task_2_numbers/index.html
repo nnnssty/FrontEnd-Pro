@@ -3,21 +3,15 @@
 
 <script>
     //Отримати від користувача 3 рядки та вивести їх у довільному порядку однією командою (шаблонні рядки)
-    const string1 = prompt("Введіть рядок 1:");
-    const string2 = prompt("Введіть рядок 2:");
-    const string3 = prompt("Введіть рядок 3:");
+    console.log(
+        [prompt("Введіть рядок 1:"), prompt("Введіть рядок 2:"), prompt("Введіть рядок 3:")]
+            .sort(() => Math.random() - 0.5)
+    );
 
-    let array = [string1, string2, string3];
-
-    array.sort(() => Math.random() - 0.5);
-
-    console.log(array);
 
     //Розбити за цифрами п'ятизначне число і вивести у вихідному порядку через пробіл.
     let number = 7896;
-
     const result = String(number).split('').join(' ');
-
     console.log(result);
 </script>
 
