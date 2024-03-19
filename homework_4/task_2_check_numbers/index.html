@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script>
+    let number = prompt("Enter a three-digit number");
+
+    let allSame = number[0] === number[1] && number[1] === number[2];
+    let hasSameDigit = number[0] === number[1] || number[1] === number[2] || number[0] === number[2];
+
+    console.log("All the numbers are the same:", allSame);
+    console.log("Some of numbers are the same:", hasSameDigit);
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ДЗ 4.2. Перевірка числа</title>
+</head>
+<body>
+    <p>Дано тризначне число, яке надае користувач, потрибно визначити:<br>
+        Чи правда, що всі цифри однакові?<br>
+        Чи є серед цифр цифри однакові?</p>
+</body>
+</html>
