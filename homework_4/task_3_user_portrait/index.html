@@ -5,22 +5,44 @@
     let year = prompt("What year were you born?");
     let city = prompt("What city do you live in?");
     let sport = prompt("What is your favourite sport?");
+    let cities = ["Київ", "Вашингтон", "Лондон"];
 
-    alert(2024-year);
+    if (year){
+        alert(2024-year);
+    } else{
+        alert("Шкода, що Ви не захотіли ввести свій рік народженння");
+    }
 
-    switch (city) {
-        case "Київ" || "Вашингтон" || "Лондон":
-            alert(`Ти живеш у столиці ${city}`)
+    if (!city){
+        alert("Шкода, що Ви не захотіли ввести своє місто");
+    } else if (cities.includes(city)) {
+        alert(`Ти живеш у столиці ${city}`);
+    } else {
+        alert(`Ти живеш у місті ${city}`);
+    }
+
+    switch (sport) {
+        case null:
+            alert("Шкода, що Ви не захотіли ввести свій улюблений спорт")
+            break;
+        case "Футбол":
+            alert(`Круто! Хочеш стати Олександром Зінченко?`)
+            break;
+        case "Волейбол":
+            alert(`Круто! Хочеш стати Олегом Плотницьким?`)
+            break;
+        case "Хокей":
+            alert(`Круто! Хочеш стати Артуром Чолачо?`)
             break;
         default:
-            alert(`Ти живеш у місті ${city}`)
+            alert(`Шкода, що ми не знаємо, що таке ${sport}`)
     }
 
 </script>
 
 <head>
     <meta charset="UTF-8">
-    <title>ДЗ 7. Портрет користувача</title>
+    <title>ДЗ 4.3. Портрет користувача</title>
 </head>
 <body>
 
