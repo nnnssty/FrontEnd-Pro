@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 6.1</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    //Створити функцію, яка прибирає з рядка всі символи, які ми передали другим аргументом.
+    // 'func(" hello world", ['l', 'd'])' поверне нам "heo wor".
+    // Вихідний рядок та символи для видалення задає користувач.
+
+    function getNewArray (string,remove) {
+        let res = '';
+        for (let char of string) {
+            if (!remove.includes(char)) {
+                res += char;
+            }
+        }
+        return res;
+    }
+
+    console.log(getNewArray(prompt("Введіть речення"), prompt("Введіть символи для видалення")));
+</script>
+</html>
