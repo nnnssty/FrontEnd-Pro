@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 7.3</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    //Цикл на кожній ітерації пропонує через prompt ввести число більше 100 (але максимум 10 ітерацій циклу).
+    // Якщо відвідувач ввів число менше ста – попросити ввести ще раз, і таке інше.
+    // Якщо користувач вводить більше ста, текст або цикл закінчує всі ітерації,
+    // то функція виводить в консоль останній введення користувача і завершує функцію.
+
+    function withCycle() {
+        let i;
+        for (let iteration = 1; iteration <= 10; iteration++) {
+            i = prompt("Введіть число більше 100");
+            if (i > 100 || i === null) {
+                break;
+            }
+        }
+        if (i !== null) {
+            console.log(i);
+        }
+    }
+
+   withCycle()
+</script>
+
+</html>
