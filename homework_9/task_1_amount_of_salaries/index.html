@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 9</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    //Дізнатись суму всіх зарплат користувачів
+    //Об'єкт може містити невідому кількість департаментів та співробітників
+
+    let company = {
+        sales: [{name: 'John', salary: 1000}, {name: 'Alice', salary: 600}],
+        development: {
+            web: [{name: 'Peter', salary: 2000}, {name: 'Alex', salary: 1800}],
+            internals: [{name: 'Jack', salary: 1300}]
+        }
+    };
+
+
+    function getTotalSalary(company) {
+        let total = 0;
+
+        for (let department in company) {
+            if (Array.isArray(company[department])) {
+                total += company[department].reduce((acc, employee) => acc + employee.salary, 0);
+            } else if (typeof company[department] === 'object') {
+                total += getTotalSalary(company[department]);
+            }
+        }
+
+        return total;
+    }
+
+    let totalSalary = getTotalSalary(company);
+    console.log(totalSalary);
+
+</script>
+
+</html>
