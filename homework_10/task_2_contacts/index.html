@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script>
+  //Створіть об'єкт, який матиме одну властивість з масивом об'єктів.
+  // Які представляють контакти у вашій контактній книзі.
+  // Кожен об'єкт має містити ім'я, номер телефону та адресу електронної пошти.
+  // Додайте метод для пошуку контакту за ім'ям та метод для додавання нових контактів.
+
+  const contactBook = {
+    contacts: [],
+
+    addContact: function(name, phoneNumber, email) {
+      this.contacts.push({ name, phoneNumber, email });
+    },
+
+    searchContactByName: function(name) {
+      return this.contacts.find(contact => contact.name === name);
+    }
+  };
+
+  contactBook.addContact('Ivan', '+380666666666', 'ivan@gmail.com');
+  contactBook.addContact('Julia', '+380555555555', 'julia@gmail.com');
+  contactBook.addContact('Inna', '+3805557546', 'inna@gmail.com');
+
+  const contact = contactBook.searchContactByName('Julia');
+  if (contact) {
+    console.log('Знайдено контакт:', contact);
+  } else {
+    console.log('Контакт не знайдено.');
+  }
+
+</script>
+</html>
