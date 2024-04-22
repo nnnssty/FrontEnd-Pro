@@ -1,5 +1,4 @@
-
-    function changeColor() {
+function changeColor() {
     const paragraph = document.getElementById("text");
     const button = document.getElementById("btn");
 
