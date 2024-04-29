@@ -30,7 +30,6 @@ function showSlides(n) {
     slides[currentSlideIndex - 1].style.display = "block";
     dots[currentSlideIndex - 1].className += " active";
 
-    // Hide Prev button at first slide and Next button at last slide
     document.querySelector('.prev').style.display = (currentSlideIndex === 1) ? 'none' : 'block';
     document.querySelector('.next').style.display = (currentSlideIndex === slides.length) ? 'none' : 'block';
 }
