@@ -1,37 +1,42 @@
-function validateForm() {
-    const name = document.getElementById('name').value;
-    const message = document.getElementById('message').value;
-    const phone = document.getElementById('phone').value;
-    const email = document.getElementById('email').value;
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('myForm');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
 
-    const errors = [];
+        const name = document.getElementById('name').value;
+        const message = document.getElementById('message').value;
+        const phone = document.getElementById('phone').value;
+        const email = document.getElementById('email').value;
 
-    if (!name.trim()) {
-        errors.push("Name is required");
-    }
+        const errors = [];
 
-    if (message.length < 5) {
-        errors.push("Message must be at least 5 characters long");
-    }
+        if (!name.trim()) {
+            errors.push("Name is required");
+        }
 
-    if (!phone.match(/^\+380\d{9}$/)) {
-        errors.push("Phone number must start with +380 and have 12 digits total");
-    }
+        if (message.length < 5) {
+            errors.push("Message must be at least 5 characters long");
+        }
 
-    if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-        errors.push("Email must be valid");
-    }
+        if (!phone.match(/^\+380\d{9}$/)) {
+            errors.push("Phone number must start with +380 and have 12 digits total");
+        }
 
-    if (errors.length > 0) {
-        const errorString = errors.join("\n");
-        alert(errorString);
-        return false;
-    }
+        if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+            errors.push("Email must be valid");
+        }
 
-    console.log("Name: " + name);
-    console.log("Message: " + message);
-    console.log("Phone number: " + phone);
-    console.log("Email: " + email);
+        if (errors.length > 0) {
+            const errorString = errors.join("\n");
+            alert(errorString);
+            return false;
+        }
 
-    return true;
-}
+        console.log("Name: " + name);
+        console.log("Message: " + message);
+        console.log("Phone number: " + phone);
+        console.log("Email: " + email);
+
+        return true;
+    });
+});
