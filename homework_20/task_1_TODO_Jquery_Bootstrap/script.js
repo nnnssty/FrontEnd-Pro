@@ -9,7 +9,7 @@ $(document).ready(function() {
             const taskItem = $(`
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <span class="task-text">${taskText}</span>
-                    <button class="btn btn-danger btn-sm deleteTaskButton">Удалить</button>
+                    <button class="btn btn-danger btn-sm deleteTaskButton">Видалити</button>
                 </li>
             `);
             taskList.append(taskItem);
@@ -54,7 +54,7 @@ $(document).ready(function() {
             const taskItem = $(`
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <span class="task-text">${task.text}</span>
-                    <button class="btn btn-danger btn-sm deleteTaskButton">Удалить</button>
+                    <button class="btn btn-danger btn-sm deleteTaskButton">Видалити</button>
                 </li>
             `);
             taskList.append(taskItem);
